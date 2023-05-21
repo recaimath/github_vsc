@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search</title>
+    <script>
+        function onSubmitForm() {
+            const keywordInput = document.getElementById('keywords');
+            const keywords = keywordInput.value;
+            window.location.href = '/search?keywords=' + encodeURIComponent(keywords);
+        }
+    </script>
+</head>
+<body>
+    <h1>Product Search</h1>
+    <form onsubmit="event.preventDefault(); onSubmitForm();">
+        <label for="keywords">Enter product keywords:</label>
+        <input type="text" id="keywords" name="keywords" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
